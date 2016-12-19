@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="red_500">#F44336</color>
+    <color name="deep_purple">#673AB7</color>
+    <color name="deep_purple_a400">#651FFF</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="cyan">#00BCD4</color>
+
+    <integer-array name="colors">
+        <item>@color/cyan</item>
+        <item>@color/red_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/deep_purple_a400</item>
+        <item>@color/deep_purple</item>
+        <item>@color/indigo</item>
+    </integer-array>
+</resources>
