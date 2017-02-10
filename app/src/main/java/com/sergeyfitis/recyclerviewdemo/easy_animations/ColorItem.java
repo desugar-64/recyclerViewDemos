@@ -1,4 +1,4 @@
-package com.sergeyfitis.recyclerviewdemo;
+package com.sergeyfitis.recyclerviewdemo.easy_animations;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -14,8 +14,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DetailsActivity"/>
+        <activity android:name=".easy_animations.EasyAnimationsActivity" />
+        <activity android:name=".layout_performance.LayoutPerformanceActivity" />
+        <activity android:name=".easy_view_type.ViewTypesActivity"></activity>
     </application>
 
 </manifest>

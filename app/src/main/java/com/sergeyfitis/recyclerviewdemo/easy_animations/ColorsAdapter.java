@@ -1,4 +1,4 @@
-package com.sergeyfitis.recyclerviewdemo;
+package com.sergeyfitis.recyclerviewdemo.easy_animations;
 
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.sergeyfitis.recyclerviewdemo.R;
 
 import java.util.List;
 
@@ -73,11 +75,11 @@ class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewHolder> 
 
         @Override
         public void onClick(View v) {
-            clickListener.onItemClick(item, itemView);
+            clickListener.onItemClick(item);
         }
     }
 
-    public interface ItemClickListener {
-        void onItemClick(ColorItem item, View child);
+    interface ItemClickListener {
+        void onItemClick(ColorItem item);
     }
 }

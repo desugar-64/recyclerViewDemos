@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">RecyclerViewDemo</string>
+    <string name="btn_shuffle">Shuffle</string>
+    <string name="btn_insert_one">Insert One</string>
+    <string name="btn_delete_one">Delete One</string>
+    <string name="btn_easy_animations">Easy animations</string>
+    <string name="btn_layout_performance">Layout performance</string>
+
+    <string name="short_text">Lorem ipsum dolor sit amet, facete denique deseruisse vis et, sed ut dolores iracundia. Te clita honestatis usu, everti copiosae vim ne.</string>
+    <string name="long_text">Omnes qualisque principes his cu, ad periculis pertinacia maiestatis pri, vim te albucius perfecto. Te eos possim vulputate, qui ornatus corpora invidunt eu. Usu ea ferri voluptatum, cu cum ancillae probatus facilisi. Vix eu vocent sapientem scribentur, cu vis falli explicari signiferumque. Commune ocurreret eu mel, ei vivendo vivendum ius. Usu ei tantas graeco vituperatoribus, eum ut modus eleifend.</string>
+    <string name="btn_add">Add item</string>
+    <string name="btn_create_adapter">Create adapter</string>
+    <string name="easy_viewtype">Easy ViewType</string>
 </resources>

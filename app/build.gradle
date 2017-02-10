@@ -19,9 +19,7 @@ android {
     }
 }
 
-ext {
-    support = "25.1.0"
-}
+ext.support = "25.1.1"
 
 dependencies {
     compile "com.android.support:appcompat-v7:$support"
