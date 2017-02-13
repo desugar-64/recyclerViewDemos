@@ -1,8 +1,9 @@
-package com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base;
+package com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models;
 
 import android.support.annotation.NonNull;
 
 import com.sergeyfitis.recyclerviewdemo.R;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 import com.sergeyfitis.recyclerviewdemo.layout_performance.CommonItem;
 
 /**
@@ -16,6 +17,11 @@ public class CommonViewItem implements ViewItem {
 
     public CommonViewItem(@NonNull CommonItem commonItem) {
         this.commonItem = commonItem;
+    }
+
+    @NonNull
+    public CommonItem getCommonItem() {
+        return commonItem;
     }
 
     @Override

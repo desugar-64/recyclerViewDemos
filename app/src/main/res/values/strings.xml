@@ -11,4 +11,7 @@
     <string name="btn_add">Add item</string>
     <string name="btn_create_adapter">Create adapter</string>
     <string name="easy_viewtype">Easy ViewType</string>
+    <string name="sorry_no_items">Sorry, no items</string>
+    <string name="btn_reload">Reload</string>
+    <string name="btn_clear">Clear</string>
 </resources>

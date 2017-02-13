@@ -1,6 +1,7 @@
 package com.sergeyfitis.recyclerviewdemo.easy_animations;
 
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +16,23 @@ import java.util.List;
  * Created by sergeyfitis on 19.12.16.
  */
 
-class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewHolder> {
+public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewHolder> {
     private LayoutInflater inflater;
     private final List<ColorItem> items;
     private final ItemClickListener clickListener;
 
-    ColorsAdapter(List<ColorItem> items, ItemClickListener clickListener) {
+    public ColorsAdapter(List<ColorItem> items, ItemClickListener clickListener) {
         this.items = items;
         this.clickListener = clickListener;
         setHasStableIds(true);
+    }
+
+    public void updateAdapter(@Nullable List<ColorItem> colorItems) {
+        items.clear();
+        if (colorItems != null) {
+            items.addAll(colorItems);
+        }
+
     }
 
     @Override
@@ -75,7 +84,9 @@ class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewHolder> 
 
         @Override
         public void onClick(View v) {
-            clickListener.onItemClick(item);
+            if (clickListener != null) {
+                clickListener.onItemClick(item);
+            }
         }
     }
 

@@ -4,10 +4,31 @@
     android:id="@+id/activity_view_types"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.sergeyfitis.recyclerviewdemo.easy_view_type.ViewTypesActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <Button
+        android:id="@+id/btnReload"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/btn_reload"/>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/btn_clear"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTypes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>
