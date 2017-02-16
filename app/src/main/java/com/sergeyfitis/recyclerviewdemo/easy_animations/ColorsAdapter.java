@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.sergeyfitis.recyclerviewdemo.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,11 +19,11 @@ import java.util.List;
 
 public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewHolder> {
     private LayoutInflater inflater;
-    private final List<ColorItem> items;
+    private List<ColorItem> items = new ArrayList<>();
     private final ItemClickListener clickListener;
 
     public ColorsAdapter(List<ColorItem> items, ItemClickListener clickListener) {
-        this.items = items;
+        updateAdapter(items);
         this.clickListener = clickListener;
         setHasStableIds(true);
     }
@@ -33,6 +34,8 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewH
             items.addAll(colorItems);
         }
 
+
+        notifyDataSetChanged();
     }
 
     @Override
@@ -72,8 +75,8 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorViewH
 
         ColorViewHolder(View itemView, ItemClickListener clickListener) {
             super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.ivColor);
             this.clickListener = clickListener;
+            imageView = (ImageView) itemView.findViewById(R.id.ivColor);
             itemView.setOnClickListener(this);
         }
 

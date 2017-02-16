@@ -2,6 +2,9 @@ package com.sergeyfitis.recyclerviewdemo.layout_performance;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.VectorDrawable;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -82,8 +85,8 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.CommonView
         void bind(CommonItem item) {
             tvTitle.setText(item.getTitle());
             tvBody.setText(item.getBody());
-            imageView.setImageTintList(ColorStateList.valueOf(item.getColor()));
-            imageView.setImageTintMode(PorterDuff.Mode.DST_OVER);
+
+            imageView.setColorFilter(item.getColor(), PorterDuff.Mode.SRC_ATOP);
         }
     }
 }

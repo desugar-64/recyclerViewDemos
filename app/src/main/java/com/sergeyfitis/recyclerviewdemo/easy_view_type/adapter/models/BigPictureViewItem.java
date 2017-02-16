@@ -23,7 +23,7 @@ public class BigPictureViewItem implements ViewItem {
     }
 
     @Override
-    public int distinctId() {
+    public long distinctId() {
         return item.hashCode();
     }
 

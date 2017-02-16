@@ -34,8 +34,8 @@ public class HorizontalViewItem implements ViewItem {
     }
 
     @Override
-    public int distinctId() {
-        return items.hashCode() + text.hashCode();
+    public long distinctId() {
+        return text.hashCode() + items.size();
     }
 
     @Override

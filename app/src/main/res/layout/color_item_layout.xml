@@ -10,8 +10,8 @@
     android:transitionName="image_child"
     app:cardCornerRadius="8dp"
     app:cardElevation="2dp"
-    android:layout_margin="2dp"
-    app:cardMaxElevation="24dp">
+    android:layout_margin="4dp"
+    app:cardMaxElevation="16dp">
 
     <ImageView
         android:id="@+id/ivColor"

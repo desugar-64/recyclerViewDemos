@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sergeyfitis.recyclerviewdemo.R;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.BigPictureViewItem;
 
@@ -18,7 +18,7 @@ import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.BigPicture
  * Created by sergeyfitis on 2/13/17.
  */
 
-class BigPicturesAdapter implements DelegatedAdapter {
+class BigPicturesAdapter implements DelegateAdapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
@@ -40,8 +40,8 @@ class BigPicturesAdapter implements DelegatedAdapter {
         PictureViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.ivBigPicture);
-            tvDesc = (TextView) itemView.findViewById(R.id.tvBigPictureHeader);
-            tvHeader = (TextView) itemView.findViewById(R.id.tvBigPictureDesc);
+            tvDesc = (TextView) itemView.findViewById(R.id.tvBigPictureDesc);
+            tvHeader = (TextView) itemView.findViewById(R.id.tvBigPictureHeader);
         }
 
         private void bind(BigPictureViewItem item) {

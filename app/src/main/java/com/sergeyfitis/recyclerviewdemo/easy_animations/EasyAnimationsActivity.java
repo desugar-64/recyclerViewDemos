@@ -111,18 +111,18 @@ public class EasyAnimationsActivity extends AppCompatActivity {
     private void deleteItem() {
         if (!items.isEmpty()) {
             items.remove(0);
-            recyclerView.getAdapter().notifyDataSetChanged();
+            ((ColorsAdapter) recyclerView.getAdapter()).updateAdapter(items);
         }
     }
 
     private void shuffleItems() {
         Collections.shuffle(items);
-        recyclerView.getAdapter().notifyDataSetChanged();
+        ((ColorsAdapter) recyclerView.getAdapter()).updateAdapter(items);
     }
 
     private void insertOneItem() {
         items.add(0, createRandomItem());
-        recyclerView.getAdapter().notifyDataSetChanged();
+        ((ColorsAdapter) recyclerView.getAdapter()).updateAdapter(items);
     }
 
     private ColorItem createRandomItem() {

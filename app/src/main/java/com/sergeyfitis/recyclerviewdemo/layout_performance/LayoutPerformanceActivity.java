@@ -2,8 +2,8 @@ package com.sergeyfitis.recyclerviewdemo.layout_performance;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -48,8 +48,12 @@ public class LayoutPerformanceActivity extends AppCompatActivity {
                         recyclerView.setAdapter(adapter);
                         break;
                     case R.id.btnAdd:
-                        ((CommonAdapter) recyclerView.getAdapter()).insert(randomItem());
-                        recyclerView.getLayoutManager().scrollToPosition(0);
+                        if (recyclerView.getAdapter() == null) {
+                            recyclerView.setAdapter(new CommonAdapter(createItems(1)));
+                        } else {
+                            ((CommonAdapter) recyclerView.getAdapter()).insert(randomItem());
+                            recyclerView.getLayoutManager().scrollToPosition(0);
+                        }
                         break;
                 }
             }

@@ -7,14 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sergeyfitis.recyclerviewdemo.R;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 
 /**
  * Created by sergeyfitis on 2/13/17.
  */
 
-class EmptyItemAdapter implements DelegatedAdapter {
+class EmptyItemAdapter implements DelegateAdapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {

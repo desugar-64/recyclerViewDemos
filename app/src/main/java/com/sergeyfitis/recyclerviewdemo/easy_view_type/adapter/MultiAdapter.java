@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.sergeyfitis.recyclerviewdemo.R;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 
 import java.util.ArrayList;
@@ -19,13 +19,13 @@ import java.util.List;
 
 public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final SparseArray<DelegatedAdapter> adapters = new SparseArray<>();
+    private final SparseArray<DelegateAdapter> adapters = new SparseArray<>();
 
     private final List<ViewItem> items = new ArrayList<>();
 
     private final ViewItem emptyItem = new ViewItem() {
         @Override
-        public int distinctId() {
+        public long distinctId() {
             return viewType();
         }
 
@@ -37,7 +37,7 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private final ViewItem progressItem = new ViewItem() {
         @Override
-        public int distinctId() {
+        public long distinctId() {
             return viewType();
         }
 
@@ -56,7 +56,7 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         adapters.put(R.layout.empty_item_layout, new EmptyItemAdapter());
 
         // Add default item
-        items.add(progressItem);
+        items.add(emptyItem);
 
         setHasStableIds(true);
     }
@@ -76,6 +76,7 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         if (items.isEmpty()) {
             items.add(emptyItem);
         }
+        notifyDataSetChanged();
     }
 
     @Override

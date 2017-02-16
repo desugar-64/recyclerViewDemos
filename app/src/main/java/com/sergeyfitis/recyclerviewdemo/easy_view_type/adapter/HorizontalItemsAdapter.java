@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.sergeyfitis.recyclerviewdemo.R;
 import com.sergeyfitis.recyclerviewdemo.easy_animations.ColorItem;
 import com.sergeyfitis.recyclerviewdemo.easy_animations.ColorsAdapter;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.HorizontalViewItem;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * Created by sergeyfitis on 2/13/17.
  */
 
-class HorizontalItemsAdapter implements DelegatedAdapter {
+class HorizontalItemsAdapter implements DelegateAdapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         return new HorizontalViewHolder(inflater.inflate(R.layout.horizontall_item_layout, parent, false));
@@ -45,7 +45,7 @@ class HorizontalItemsAdapter implements DelegatedAdapter {
             final LinearLayoutManager layoutManager =
                     new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false);
             layoutManager.setItemPrefetchEnabled(true);
-            layoutManager.setInitialPrefetchItemCount(5);
+            layoutManager.setInitialPrefetchItemCount(4);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setHasFixedSize(true);
 

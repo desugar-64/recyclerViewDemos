@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.sergeyfitis.recyclerviewdemo.R;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.HeaderViewItem;
 
@@ -16,7 +16,7 @@ import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.HeaderView
  * Created by sergeyfitis on 2/13/17.
  */
 
-public class HeaderItemsAdapter implements DelegatedAdapter {
+public class HeaderItemsAdapter implements DelegateAdapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         return new HeaderViewHolder(inflater.inflate(R.layout.header_item_layout, parent, false));

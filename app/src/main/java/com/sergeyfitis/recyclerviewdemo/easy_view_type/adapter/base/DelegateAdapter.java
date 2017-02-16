@@ -9,7 +9,7 @@ import android.view.ViewGroup;
  * Created by sergeyfitis on 2/10/17.
  */
 
-public interface DelegatedAdapter {
+public interface DelegateAdapter {
 
     RecyclerView.ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent);
     void onBindViewHolder(RecyclerView.ViewHolder holder, ViewItem viewItem);

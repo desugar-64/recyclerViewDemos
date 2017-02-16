@@ -5,6 +5,6 @@ package com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base;
  */
 
 public interface ViewItem {
-    int distinctId();
+    long distinctId();
     int viewType();
 }

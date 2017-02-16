@@ -17,19 +17,19 @@
             android:id="@+id/btnShuffle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:title="@string/btn_shuffle"
+            android:text="@string/btn_shuffle"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btnInsert"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:title="@string/btn_insert_one"
+            android:text="@string/btn_insert_one"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:title="@string/btn_delete_one"
+            android:text="@string/btn_delete_one"
             android:layout_weight="1"/>
 
     </LinearLayout>

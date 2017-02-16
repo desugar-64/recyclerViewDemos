@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.sergeyfitis.recyclerviewdemo.easy_animations.EasyAnimationsActivity;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.ViewTypesActivity;
 import com.sergeyfitis.recyclerviewdemo.layout_performance.LayoutPerformanceActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnAnimations = (Button) findViewById(R.id.btnAnimations);
         Button btnLayoutPerformance = (Button) findViewById(R.id.btnLayoutPerformance);
+        Button btnMultyViewType = (Button) findViewById(R.id.btnMultiViewType);
 
         final View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -28,12 +30,16 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btnLayoutPerformance:
                         LayoutPerformanceActivity.start(MainActivity.this);
                         break;
+                    case R.id.btnMultiViewType:
+                        ViewTypesActivity.start(MainActivity.this);
+                        break;
                 }
             }
         };
 
         btnAnimations.setOnClickListener(onClickListener);
         btnLayoutPerformance.setOnClickListener(onClickListener);
+        btnMultyViewType.setOnClickListener(onClickListener);
 
     }
 }

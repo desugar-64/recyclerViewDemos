@@ -1,6 +1,5 @@
 package com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter;
 
-import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sergeyfitis.recyclerviewdemo.R;
-import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegatedAdapter;
+import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.DelegateAdapter;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.base.ViewItem;
 import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.CommonViewItem;
 
@@ -19,7 +18,7 @@ import com.sergeyfitis.recyclerviewdemo.easy_view_type.adapter.models.CommonView
  * Created by sergeyfitis on 2/13/17.
  */
 
-public class CommonItemsAdapter implements DelegatedAdapter {
+public class CommonItemsAdapter implements DelegateAdapter {
 
 
     @Override
@@ -44,14 +43,14 @@ public class CommonItemsAdapter implements DelegatedAdapter {
             imageView = (ImageView) itemView.findViewById(R.id.ivAvatar);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             tvBody = (TextView) itemView.findViewById(R.id.tvBody);
+
         }
 
         private void bind(CommonViewItem item) {
             this.item = item;
             tvTitle.setText(item.getCommonItem().getTitle());
             tvBody.setText(item.getCommonItem().getBody());
-            imageView.setImageTintList(ColorStateList.valueOf(item.getCommonItem().getColor()));
-            imageView.setImageTintMode(PorterDuff.Mode.DST_OVER);
+            imageView.setColorFilter(item.getCommonItem().getColor(), PorterDuff.Mode.SRC_ATOP);
 
         }
     }

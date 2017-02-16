@@ -4,11 +4,11 @@
         <set>
             <objectAnimator android:propertyName="translationZ"
                 android:duration="300"
-                android:valueTo="12"
+                android:valueTo="8"
                 android:valueType="floatType"/>
             <objectAnimator android:propertyName="elevation"
                 android:duration="300"
-                android:valueTo="12"
+                android:valueTo="8"
                 android:valueType="floatType"/>
         </set>
     </item>

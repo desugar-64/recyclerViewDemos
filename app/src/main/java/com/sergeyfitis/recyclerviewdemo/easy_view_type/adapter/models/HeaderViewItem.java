@@ -24,7 +24,7 @@ public class HeaderViewItem implements ViewItem {
     }
 
     @Override
-    public int distinctId() {
+    public long distinctId() {
         return headerText.hashCode();
     }
 
